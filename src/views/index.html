@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% set pageId = "page-home" %}
+    <title>Ecoleta</title>
+{% block styles %}
+	<link rel="stylesheet" href="/style/home.css">
+	<link rel="stylesheet" href="/style/modal.css">
+{% endblock styles %}
+
+{% block content %}
+	<div class="content">
+		<header>
+			<img src="/assets/logo.svg" alt="logomarca">
+			<a href="create-point"> <span></span> Cadastre um ponto de coleta</a>	
+		</header>
+		<main>
+			<h1>Seu marketplace de coleta de resíduos</h1>
+			<p>Ajudamos pessoas a encontrarem pontos de coleta de forma de eficiente.</p>
+			<a href="#"><span></span><strong>Pesquisar pontos de coleta</strong></a>
+		</main>
+	</div>
+{% endblock content %}
+<!--Using template engine(nunjuncks) for not repeat page parts.
+This case the modal(Search a point)-->
+{% block modal %}
+	{% include "partials/modal.html" %}
+{% endblock modal %}
+
+{% block scripts %}
+	<script src="/script/index.js"></script>
+{% endblock scripts %}
+	
